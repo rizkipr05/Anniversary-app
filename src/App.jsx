@@ -255,7 +255,7 @@ export default function App() {
       </section>
 
       <footer className="footer">
-        made with <span className="inlineIcon"><Icon name="heart" /></span> in pink
+        my first experience
       </footer>
 
       {/* Lightbox */}
