@@ -255,7 +255,7 @@ export default function App() {
       </section>
 
       <footer className="footer">
-        my first experience
+       Made by my first experience
       </footer>
 
       {/* Lightbox */}
