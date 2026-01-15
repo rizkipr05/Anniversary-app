@@ -1,26 +1,21 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import "./App.css";
+import photo1 from "./assets/WhatsApp Image 2026-01-12 at 16.09.53 (1).jpeg";
+import photo2 from "./assets/WhatsApp Image 2026-01-12 at 16.09.53 (2).jpeg";
+import photo3 from "./assets/WhatsApp Image 2026-01-12 at 16.09.53 (3).jpeg";
+import photo4 from "./assets/WhatsApp Image 2026-01-12 at 16.09.53 (4).jpeg";
+import photo5 from "./assets/WhatsApp Image 2026-01-12 at 16.09.53 (5).jpeg";
+import song from "./assets/sounds/Nadhif_Basalamah_-_bergema_sampai_selamanya_(mp3.pm).mp3";
 
 export default function App() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeImg, setActiveImg] = useState(null);
 
-  // Music (opsional)
   const audioRef = useRef(null);
   const [musicReady, setMusicReady] = useState(false);
   const [playing, setPlaying] = useState(false);
 
-  const photos = useMemo(
-    () => [
-      // Ganti dengan foto kamu (bisa URL atau import local)
-      "src/assets/WhatsApp Image 2026-01-12 at 16.09.53 (1).jpeg",
-      "src/assets/WhatsApp Image 2026-01-12 at 16.09.53 (2).jpeg",
-      "src/assets/WhatsApp Image 2026-01-12 at 16.09.53 (3).jpeg",
-      "src/assets/WhatsApp Image 2026-01-12 at 16.09.53 (4).jpeg",
-      "src/assets/WhatsApp Image 2026-01-12 at 16.09.53 (5).jpeg",
-    ],
-    []
-  );
+  const photos = useMemo(() => [photo1, photo2, photo3, photo4, photo5], []);
 
   const timeline = useMemo(
     () => [
@@ -108,7 +103,7 @@ export default function App() {
           ref={audioRef}
           loop
           preload="auto"
-          src="/src/assets/sounds/Nadhif_Basalamah_-_bergema_sampai_selamanya_(mp3.pm).mp3"
+          src={song}
         />
       </div>
 
